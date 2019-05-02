@@ -9,27 +9,29 @@ namespace FirstReactApp
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            bundles.Add(new StyleBundle("~/bundles/css").Include(
+                    "~/Content/bootstrap.min.css",
+                    "~/Content/Site.css"));
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
-
-            // Use the development version of Modernizr to develop with and learn from. Then, when you're
-            // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
+                        "~/Scripts/jquery-1.10.2.min.js"));            
+                        
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+                        "~/Scripts/modernizr-2.6.2.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/bootstrap.min.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+            //All Required REACTJS Lib
+             bundles.Add(new ScriptBundle("~/bundles/react").Include(
+                    "~/Scripts/react/react.js",
+                    "~/Scripts/react/react-dom.js",
+                    "~/Scripts/react/remarkable.min.js",
+                    "~/Scripts/react/prop-types.js"));
+
             //BabelBundle
             bundles.Add(new BabelBundle("~/bundles/main").Include(
-                     "~/Scripts/react/FirstReactApp.jsx"));
+                     "~/Scripts/jsx/FirstReactApp.jsx"));
         }
     }
 }
