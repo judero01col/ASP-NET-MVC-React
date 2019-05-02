@@ -31,7 +31,8 @@ namespace FirstReactApp
 
             //BabelBundle
             bundles.Add(new BabelBundle("~/bundles/main").Include(
-                     "~/Scripts/jsx/FirstReactApp.jsx"));
+                     "~/Scripts/jsx/FirstReactApp.jsx",
+                     "~/Scripts/jsx/Menu.jsx"));
         }
     }
 }

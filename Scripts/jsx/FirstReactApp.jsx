@@ -1,5 +1,6 @@
 ﻿class HelloWorld extends React.Component {   
-    render() {
+    render()
+    {
         console.log("Hello World React JS! from react");
         return (            
             <div>
