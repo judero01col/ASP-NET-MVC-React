@@ -1,9 +1,9 @@
-﻿
-class NavMenu extends React.Component {
+﻿class NavMenu extends React.Component {
     render() {
         console.log("Hello World React JS! from react");
-        return (
+        return (           
             <div className='main-nav'>
+                <h1>Menu World React JS!</h1>
                 <div className='navbar navbar-inverse'>
                     <div className='navbar-header'>
                         <button type='button' className='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
@@ -35,5 +35,7 @@ class NavMenu extends React.Component {
     }
 }
 
-
+ReactDOM.render(
+    <NavMenu />,
+    document.getElementById('Menu'));
 
